@@ -13,14 +13,22 @@ const Header = () => {
         </h3>
         <div className="hidden md:flex gap-7">
           {links.map((l) => (
-            <Link key={l.id} href={"#"} className="text-base font-semibold ">
-              {l.desc}
-            </Link>
+            <div key={l.id} className="relative group">
+              <Link
+                key={l.id}
+                href={"#"}
+                className="text-base font-semibold group-hover:text-teal-600 transition-colors duration-300"
+              >
+                {l.desc}
+              </Link>
+              <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-0 group-hover:w-full h-0.5 bg-teal-600 transition-all duration-500"></span>
+            </div>
           ))}
         </div>
         <div className="flex md:block items-center gap-3">
-          <Button className="shadow-none rounded-full text-sm border border-[#377389] bg-white text-[#377389]">
-            Let's Talk
+          <Button className="relative group overflow-hidden shadow-none rounded-full text-sm border border-[#377389] hover:bg-white hover:text-white bg-white text-[#377389]">
+            <div className="absolute left-0 top-0 z-0 w-0 h-full group transition-all ease-out bg-[#377389] duration-1000 group-hover:w-full"></div>
+            <div className="relative z-10">Let's Talk</div>
           </Button>
           <Menu className="md:hidden text-[#377389]" />
         </div>

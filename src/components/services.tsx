@@ -6,8 +6,8 @@ import { ChevronRight } from "lucide-react";
 const Services = () => {
   return (
     <div className="">
-      <div className="p-4 md:px-14 text-center flex flex-col justify-center w-full items-center pt-14 md:pt-17 space-y-5">
-        <h2 className="text-4xl">Our Services</h2>
+      <div className="p-4 md:px-14 text-center flex flex-col justify-center w-full items-center pt-10 md:pt-17 space-y-5">
+        <h2 className="text-2xl md:text-4xl">Our Services</h2>
         <p className="md:text-base text-sm md:w-[29rem] text-gray-700">
           At Writefreak Studios, we help small and startup businesses stand out
           through storytelling and smart digital strategy.
@@ -15,17 +15,23 @@ const Services = () => {
       </div>
       <div className="p-4 gap-6 md:px-14 grid grid-cols-1 md:grid-cols-2">
         {cards.map((c) => (
-          <Card key={c.id} className="rounded-sm bg">
-            <CardContent>
-              <div className="space-y-5">
+          <Card
+            key={c.id}
+            className="rounded-sm hover:bg-gray-50 transition-colors duration-300"
+          >
+            <CardContent className="">
+              <div className="space-y-3 ">
                 <h2 className="text-xl font-semibold text-[#377389]">
                   {c.title}
                 </h2>
-                <p className="text-gray-700 md:text-sm text-xs">{c.desc}</p>
+                <p className="text-gray-700 md:text-sm text-xs ">{c.desc}</p>
                 <div className="pt-6">
-                  <Button className="bg-white border border-[#377389] rounded-full text-[#377389]">
-                    Learn more
-                    <ChevronRight />
+                  <Button className="relative group overflow-hidden shadow-none rounded-full text-sm bg-white text-[#377389] border border-[#377389] hover:bg-white hover:text-white">
+                    <div className="absolute bg-[#377389] top-0 left-0 w-0 h-full transition-all duration-1000 ease-out group-hover:w-full hover:text-white z-0"></div>
+                    <div className="relative z-10 flex gap-2 items-center">
+                      Learn More
+                      <ChevronRight className="group" />
+                    </div>
                   </Button>
                 </div>
               </div>
