@@ -23,7 +23,7 @@ const Body = () => {
           With Lasting Impact
         </h1>
 
-        <div className="md:w-full md:">
+        <div className="md:w-full ">
           <div className="relative">
             <div className="flex flex-col gap-9 md:gap-16">
               <p className="text-[15px] text-gray-200 md:w-[28rem]">

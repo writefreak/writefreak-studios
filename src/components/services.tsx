@@ -24,7 +24,7 @@ const Services = () => {
                 <h2 className="text-xl font-semibold text-[#377389]">
                   {c.title}
                 </h2>
-                <p className="text-gray-700 md:text-sm text-xs ">{c.desc}</p>
+                <p className="text-gray-700 md:text-sm text-sm ">{c.desc}</p>
                 <div className="pt-6">
                   <Button className="relative group overflow-hidden shadow-none rounded-full text-sm bg-white text-[#377389] border border-[#377389] hover:bg-white hover:text-white">
                     <div className="absolute bg-[#377389] top-0 left-0 w-0 h-full transition-all duration-1000 ease-out group-hover:w-full hover:text-white z-0"></div>

@@ -3,6 +3,7 @@ import { title } from "process";
 import React from "react";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
+import { MobileHeader } from "./mobile-header";
 
 const Header = () => {
   return (
@@ -30,7 +31,7 @@ const Header = () => {
             <div className="absolute left-0 top-0 z-0 w-0 h-full group transition-all ease-out bg-[#377389] duration-1000 group-hover:w-full"></div>
             <div className="relative z-10">Let's Talk</div>
           </Button>
-          <Menu className="md:hidden text-white" />
+          <MobileHeader className="md:hidden" />
         </div>
       </div>
     </div>
