@@ -1,9 +1,21 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
-const Video = () => {
+interface Props {
+  className?: string;
+}
+
+const Video = ({ className }: Props) => {
   return (
-    <div>
-      <video width="600" autoPlay muted loop controls>
+    <div className={cn("", className)}>
+      <video
+        className="md:w-full brightness-50 h-[600px] md:h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      >
         <source
           src="/6143904-uhd_4096_2160_25fps (1) (3) (1) (1).mp4"
           type="video/mp4"

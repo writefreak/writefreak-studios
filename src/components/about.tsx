@@ -1,16 +1,17 @@
 import React from "react";
 import { Card, CardContent } from "./ui/card";
+import { MobileAbout } from "./mobileAbout";
 
 const About = () => {
   return (
     <div>
-      <div className="md:bg-[#377389] md:px-14 p-4 md:border-b-0 md:border-t-0 border-b border-t">
+      <div className="md:bg-[#377389]  md:px-14 p-4 md:border-b-0 md:border-t-0 border-b border-t">
         <div className="space-y-10">
-          <div className="space-y-5 w-full flex flex-col justify-center items-center pt-5 md:pt-10">
+          <div className="space-y-5 w-full flex flex-col justify-center items-center pt-30 md:pt-10">
             <h3 className="text-2xl md:text-4xl md:text-white">
               Why Choose Us?
             </h3>
-            <p className="text-gray-700 md:text-white md:text-sm text-xs text-center md:w-[39rem]">
+            <p className="text-gray-700 md:text-white text-sm  text-center md:w-[39rem]">
               At writefreak Studios, we specialize in storytelling that truly
               connects, with each emotion-driven narrative tailored to amplify
               the unique voices of startup brands and small businesses.
@@ -20,7 +21,7 @@ const About = () => {
             </p>
           </div>
           <div>
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-6 pb-10">
+            <div className="md:grid hidden md:grid-cols-5 gap-5 md:gap-6 pb-10">
               {aboutText.map((a) => (
                 <Card key={a.id} className="rounded-sm ">
                   <CardContent>
@@ -41,6 +42,7 @@ const About = () => {
                 </Card>
               ))}
             </div>
+            <MobileAbout className="md:hidden" />
           </div>
         </div>
       </div>

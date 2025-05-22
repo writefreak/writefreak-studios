@@ -5,16 +5,11 @@ import { ChevronRight } from "lucide-react";
 
 const BodyImage = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 md:gap-14">
-      <div className="md:h-[300px] h-[250px]  md:flex">
-        {/* <img
-          src="/aaron-burden-y02jEX_B0O0-unsplash (1).jpg"
-          alt=""
-          className="h-full w-full object-cover"
-        /> */}
+    <div className="relative md:w-full md:h-screen md:">
+      <div className="absolute top-0 left-0 z-0 w-full">
         <Video />
       </div>
-      <div>
+      <div className="relative">
         <div className="flex flex-col gap-9 md:gap-16">
           <p className="text-[15px] text-gray-700">
             At Writefreak Studios, we amplify the voices of startups through
