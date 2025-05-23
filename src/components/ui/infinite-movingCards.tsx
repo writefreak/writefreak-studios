@@ -26,8 +26,7 @@ export const InfiniteMovingCards = ({
         {/* Increased px above so that the first and last cards don't hide */}
         {items.map((item) => (
           <li
-            className="w-[350px] max-w-full relative rounded-md border flex-shrink-0 px-8 py-6 md:w-[450px]"
-            style={{ background: "white" }}
+            className="w-[350px] max-w-full bg-card relative rounded-md border flex-shrink-0 px-8 py-6 md:w-[450px]"
             key={item.id}
           >
             <blockquote>
@@ -37,11 +36,11 @@ export const InfiniteMovingCards = ({
                     <div className="h-10 w-10">
                       <img src={item.img} alt="" className="h-full w-full" />
                     </div>
-                    <span className="leading-[1.6] text-[#377389] font-bold font-raleway text-xl">
+                    <span className="leading-[1.6] dark:text-white text-[#377389] font-bold font-raleway text-xl">
                       {item.title}
                     </span>
                   </div>
-                  <span className="text-xs leading-[1.6] text-gray-700 font-montserrat">
+                  <span className="text-xs leading-[1.6] dark:text-gray-400 text-gray-700 font-montserrat">
                     {item.desc}
                   </span>
                 </div>

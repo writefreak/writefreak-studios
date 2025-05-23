@@ -8,7 +8,7 @@ const Services = () => {
     <div className="">
       <div className="p-4 md:px-14 text-center flex flex-col justify-center w-full items-center pt-10 md:pt-17 space-y-5">
         <h2 className="text-2xl md:text-4xl">Our Services</h2>
-        <p className="md:text-base text-sm md:w-[29rem] text-gray-700">
+        <p className="md:text-base text-sm md:w-[29rem] text-gray-700 dark:text-gray-300">
           At Writefreak Studios, we help small and startup businesses stand out
           through storytelling and smart digital strategy.
         </p>
@@ -17,16 +17,19 @@ const Services = () => {
         {cards.map((c) => (
           <Card
             key={c.id}
-            className="rounded-sm hover:bg-gray-50 transition-colors duration-300"
+            className="rounded-sm hover:bg-gray-50 dark:hover:bg-[#171717] dark:transition-none transition-colors duration-300"
+            data-aos="fade-up"
           >
             <CardContent className="">
               <div className="space-y-3 ">
-                <h2 className="text-xl font-semibold text-[#377389]">
+                <h2 className="text-xl font-semibold text-[#377389] dark:text-white">
                   {c.title}
                 </h2>
-                <p className="text-gray-700 md:text-sm text-sm ">{c.desc}</p>
+                <p className="text-gray-700 md:text-sm text-sm dark:text-gray-300">
+                  {c.desc}
+                </p>
                 <div className="pt-6">
-                  <Button className="relative group overflow-hidden shadow-none rounded-full text-sm bg-white text-[#377389] border border-[#377389] hover:bg-white hover:text-white">
+                  <Button className="relative group overflow-hidden shadow-none rounded-full text-sm bg-white text-[#377389] border border-[#377389] hover:bg-white hover:text-white dark:bg-transparent">
                     <div className="absolute bg-[#377389] top-0 left-0 w-0 h-full transition-all duration-1000 ease-out group-hover:w-full hover:text-white z-0"></div>
                     <div className="relative z-10 flex gap-2 items-center">
                       Learn More

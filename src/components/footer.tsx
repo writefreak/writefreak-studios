@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="md:border-t text-xs p-4  md:pr-0 md:px-10 md:py-3">
+      <div className="border-t text-xs p-4  md:pr-0 md:px-10 md:py-3 py-6">
         <p>© 2025 Writefreak Studios. All Rights Reserved.</p>
       </div>
     </div>

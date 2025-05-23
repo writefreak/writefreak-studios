@@ -6,7 +6,7 @@ import { ChevronRight } from "lucide-react";
 
 const Body = () => {
   return (
-    <div className="relative md:h-screen w-full pt-10 md:pt-20">
+    <div className="relative md:h-screen w-full pt-10 md:pt-20 md:mt-0">
       <div className="absolute top-0 left-0 z-0 w-full">
         <img
           src="/These hand typed notes are special because they….jpeg"
