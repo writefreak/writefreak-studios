@@ -21,6 +21,7 @@ import {
 import Link from "next/link";
 import UserProfile from "./ui/userProfile";
 import { ThemeControl } from "./theme-control";
+import { MobileTheme } from "./mobileTheme";
 
 interface props {
   className?: string;
@@ -30,7 +31,7 @@ export function MobileHeader({ className }: props) {
   return (
     <Sheet>
       <SheetTrigger asChild className={cn("", className)}>
-        <Button className="bg-transparent">
+        <Button className="bg-transparent hover:bg-transparent">
           <Menu height={20} width={20} className="md:hidden  text-white" />
         </Button>
       </SheetTrigger>
@@ -43,7 +44,7 @@ export function MobileHeader({ className }: props) {
         <div className="p-4 flex flex-col gap-6">
           <div className="flex flex-col gap-3 pb-5 border-b-2">
             <p className="text-xl">Theme</p>
-            <ThemeControl />
+            <MobileTheme />
           </div>
           <div className="pb-1"></div>
           {links.map((l) => (

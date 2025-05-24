@@ -9,7 +9,11 @@ import { ThemeControl } from "./theme-control";
 
 const Header = () => {
   return (
-    <div className="font-raleway backdrop-blur-md dark:md:bg-[#0a0a0a]/60 dark:md:backdrop-blur-md bg-black/50 md:bg-white shadow-md p-4 md:px-14 fixed top-0 left-0 right-0 z-50 mx-auto">
+    <div
+      className={
+        "font-raleway backdrop-blur-md dark:md:bg-[#0a0a0a]/60 dark:md:backdrop-blur-md bg-black/50 md:bg-white shadow-md p-4 md:px-14 fixed top-0 left-0 right-0 z-50 mx-auto"
+      }
+    >
       <div className="flex items-center w-full justify-between">
         <h3 className="text-[18px] font-semibold text-white md:text-[#377389]">
           Writefreak Studios.
@@ -34,7 +38,7 @@ const Header = () => {
               <div className="absolute left-0 top-0 z-0 w-0 h-full group transition-all ease-out bg-[#377389] duration-1000 group-hover:w-full"></div>
               <div className="relative z-10">Let's Talk</div>
             </Button>
-            <ThemeControl />
+            <ThemeControl className="hidden md:block" />
           </div>
           <MobileHeader className="md:hidden" />
         </div>

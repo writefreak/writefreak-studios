@@ -9,22 +9,16 @@ import {
 } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
 import { Moon, Sun } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-export function ThemeControl() {
+interface props {
+  className?: string;
+}
+
+export function ThemeControl({ className }: props) {
   const { setTheme } = useTheme();
   return (
     <div>
-      <Tabs defaultValue="account" className="w-[200px] md:hidden">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger onClick={() => setTheme("light")} value="light">
-            Light
-          </TabsTrigger>
-          <TabsTrigger onClick={() => setTheme("dark")} value="dark">
-            Dark
-          </TabsTrigger>
-        </TabsList>
-      </Tabs>
-
       <div className="hidden md:flex">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

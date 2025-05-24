@@ -2,7 +2,13 @@
 
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { ChevronDownIcon, Minus, Plus } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronDownIcon,
+  ChevronUp,
+  Minus,
+  Plus,
+} from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
@@ -41,8 +47,7 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <Plus className="text-muted-foreground [&[data-state=open]>svg]:hidden flex pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200 " />
-        <Minus className="text-muted-foreground [&[data-state=open]>svg]:flex hidden pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
+        <ChevronDown className="text-muted-foreground data-[state=open]:hidden flex pointer-events-none size-4 shrink-0 translate-y-0.5 transition-transform duration-200" />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );
