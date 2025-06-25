@@ -4,6 +4,9 @@ import Body from "@/components/body";
 import Faqs from "@/components/faqs";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import Portfolio from "@/components/portfolio";
+import Review from "@/components/reviews";
+import Reviews from "@/components/reviews";
 import Services from "@/components/services";
 import React from "react";
 
@@ -18,6 +21,8 @@ const page = () => {
       <About />
       <Services />
       <Faqs />
+      <Portfolio />
+      <Review />
       <Footer />
     </div>
   );

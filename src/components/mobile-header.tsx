@@ -18,7 +18,7 @@ import {
   Menu,
   Star,
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import UserProfile from "./ui/userProfile";
 import { ThemeControl } from "./theme-control";
 import { MobileTheme } from "./mobileTheme";
@@ -50,7 +50,12 @@ export function MobileHeader({ className }: props) {
           {links.map((l) => (
             <div key={l.id} className="flex items-center gap-2 pb-4">
               <div>{l.icon}</div>
-              <Link key={l.id} href={"#"} className="text-sm font-semibold">
+              <Link
+                to={l.desc}
+                key={l.id}
+                href={l.desc}
+                className="text-sm font-semibold"
+              >
                 {l.desc}
               </Link>
             </div>

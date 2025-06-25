@@ -1,4 +1,5 @@
-import Link from "next/link";
+"use client";
+import { Link } from "react-scroll";
 import { title } from "process";
 import React from "react";
 import { Button } from "./ui/button";
@@ -22,6 +23,9 @@ const Header = () => {
           {links.map((l) => (
             <div key={l.id} className="relative group">
               <Link
+                smooth={true}
+                duration={1000}
+                to={l.desc}
                 key={l.id}
                 href={"#"}
                 className="text-base font-semibold group-hover:text-[#377389] transition-colors duration-300"
@@ -68,6 +72,10 @@ const links = [
   },
   {
     id: 5,
+    desc: "Portfolio",
+  },
+  {
+    id: 6,
     desc: "FAQs",
   },
 ];
