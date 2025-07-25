@@ -22,7 +22,7 @@ const page = () => {
       <Services />
       <Faqs />
       <Portfolio />
-      <Review />
+      {/* <Review /> */}
       <Footer />
     </div>
   );

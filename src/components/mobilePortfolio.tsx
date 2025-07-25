@@ -19,7 +19,6 @@ export default function MobilePortfolio() {
             className={`rounded-lg shadow-md p-4 transition-all duration-300 relative overflow-hidden bg-white ${
               isActive ? "h-72 scale-105" : "h-72"
             }`}
-            data-aos="fade-up"
           >
             {/* Image Section (hidden when active) */}
             {!isActive && (
